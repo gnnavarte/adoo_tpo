@@ -1,7 +1,7 @@
 package modelado;
 
-import modelado.Objetivo;
 import modelado.TrofeosConseguidos;
+import moduloObjetivo.Objetivo;
 
 
 public class Socio {
