@@ -1,4 +1,5 @@
 package modelado;
+import java.util.*;
 
 public class Medicion {
 	public Medicion(Integer peso, Double masa_corporal, Double grasa_corporal, Date fecha) {

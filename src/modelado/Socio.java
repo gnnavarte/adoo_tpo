@@ -1,4 +1,5 @@
 package modelado;
+import java.util.*;
 
 import modelado.TrofeosConseguidos;
 import moduloObjetivo.Objetivo;
