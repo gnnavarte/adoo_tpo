@@ -7,9 +7,16 @@ public class Entrenamiento {
 	private List<Ejercicio> ejercicios;
 	private List<Ejercicio> ListadoEjercicios;
 	private int duracionSemanas;
+	private boolean completado = false;
 	
 	
-	
+	public boolean isCompletado() {
+		return completado;
+	}
+
+
+
+
 	public Entrenamiento(List<Ejercicio> ejercicios,int duracionSemanas) {
 		this.ejercicios = ejercicios;
 		this.duracionSemanas=duracionSemanas;
@@ -37,4 +44,8 @@ public class Entrenamiento {
 		return new Entrenamiento(ejercicios,4);
 	}
 	
+	
+	public void completarEntrenamiento() {
+		this.completado = true;
+	}
 }

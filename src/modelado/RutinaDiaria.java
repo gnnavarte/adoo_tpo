@@ -4,20 +4,25 @@ import java.util.*;
 import modelado.Trofeo;
 
 public class RutinaDiaria {
-	private List<Entrenamiento> entrenamiento;
+	private List<Entrenamiento> entrenamientos;
 	private boolean reforzada;
 	private List<Trofeo> observador;
+	private boolean completada = false;
 	
 	
 	
 	public RutinaDiaria(List<Entrenamiento> entrenamiento, boolean reforzada,  List<Trofeo> observador) {
-		this.entrenamiento = entrenamiento;
+		this.entrenamientos = entrenamiento;
 		this.reforzada = reforzada;
 		this.observador=observador;
 	}
 
+	public boolean isCompletada() {
+		return completada;
+	}
+
 	public RutinaDiaria generarRutina(Entrenamiento entrenamiento,boolean reforzada, List<Trofeo> observador) {
-		return new RutinaDiaria(this.entrenamiento,this.reforzada,this.observador);
+		return new RutinaDiaria(this.entrenamientos,this.reforzada,this.observador);
 	}
 	
 	public RutinaDiaria rutinaNueva(int aerobicoMinimo, int AerobicoMaximo) {
@@ -29,5 +34,15 @@ public class RutinaDiaria {
 		return nuevaRutina;
 	}
 	
-	
+	public void completarRutina() {
+		boolean cumple = true;
+		for (Entrenamiento entrenamiento : entrenamientos) {
+			if (entrenamiento.isCompletado() == false) {
+				cumple = false;
+			}
+		}
+		if (cumple) {
+			this.completada = true;
+		}
+	}
 }

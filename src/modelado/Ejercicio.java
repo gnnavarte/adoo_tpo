@@ -1,6 +1,6 @@
 package modelado;
-import modelado.GrupoMuscular;
-import modelado.NivelExigencia;
+import enumerations.GrupoMuscular;
+import enumerations.NivelExigencia;
 
 
 public class Ejercicio {

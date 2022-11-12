@@ -41,5 +41,12 @@ public class Socio {
 	public void registrarMedicion(Medicion medicion) {
 		mediciones.add(medicion);
 		peso = medicion.getPeso();
+		for (Trofeo observador : observadores) {
+			observador.chequearPremio();
+		}
+	}
+
+	public List<Medicion> getMediciones() {
+		return mediciones;
 	}
 }

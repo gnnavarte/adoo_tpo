@@ -1,13 +1,16 @@
 package modelado;
 
 import java.sql.Date;
-import modelado.TipoTrofeo;
+import java.time.LocalDate;
 
-public class Trofeo {
-
-	private String nombre;
-	private String descripcion;
-	private Date fechaConseguido;
-	private TipoTrofeo tipoTrofeo;
+public abstract class Trofeo {
+	
+	
+	protected String nombre;
+	protected String descripcion;
+	protected LocalDate fechaConseguido;
+	
+	public void chequearPremio() {
+	}
 	
 }
