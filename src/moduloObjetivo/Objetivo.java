@@ -12,6 +12,12 @@ public class Objetivo {
 	public void setEstrategia(EstrategiaObjetivo estrategia){
 		this.objetivoStrategy=objetivoStrategy;
 	}
+
+	public Objetivo(EstrategiaObjetivo objetivoStrategy) {
+		this.objetivoStrategy = objetivoStrategy;
+	}
+	
+	
 	
 
 }
