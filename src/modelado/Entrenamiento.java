@@ -1,12 +1,13 @@
 package modelado;
 import java.util.*;
+
+import enumerations.GrupoMuscular;
+import enumerations.NivelExigencia;
 import modelado.RutinaDiaria;
 import modelado.Ejercicio;
 
 public class Entrenamiento {
 	private List<Ejercicio> ejercicios;
-	private List<Ejercicio> ListadoEjercicios;
-	private int duracionSemanas;
 	private boolean completado = false;
 	
 	
@@ -14,12 +15,16 @@ public class Entrenamiento {
 		return completado;
 	}
 
+	public Entrenamiento(NivelExigencia nivel, int nivelAerobicoMinimo, GrupoMuscular grupo) {
+		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
+		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
+		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
+		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
+	}
 
 
-
-	public Entrenamiento(List<Ejercicio> ejercicios,int duracionSemanas) {
+	public Entrenamiento(List<Ejercicio> ejercicios) {
 		this.ejercicios = ejercicios;
-		this.duracionSemanas=duracionSemanas;
 	}
 	
 	
@@ -27,13 +32,12 @@ public class Entrenamiento {
 
 	public Entrenamiento nuevoEntrenamiento() {
 		List<Ejercicio> ejercicios = null;
-		return new Entrenamiento(ejercicios,4);
+		return new Entrenamiento(ejercicios);
 	}
 
 
-
-
-	public Entrenamiento nuevoEntrenamiento(int aerobicoMinimo, int aerobicoMaximo) {
+	/*
+	private Entrenamiento nuevoEntrenamiento(int aerobicoMinimo, int aerobicoMaximo,int num) {
 		List<Ejercicio> ejercicios = null;
 		for (int i = 0;i<ListadoEjercicios.size();i++) {
 			Ejercicio ejercicio=ListadoEjercicios.get(i);
@@ -41,8 +45,9 @@ public class Entrenamiento {
 				ejercicios.add(ejercicio);
 			}
 		}
-		return new Entrenamiento(ejercicios,4);
+		return new Entrenamiento(ejercicios);
 	}
+	*/
 	
 	
 	public void completarEntrenamiento() {
