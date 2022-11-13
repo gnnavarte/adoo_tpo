@@ -2,6 +2,9 @@ package modelado;
 import enumerations.GrupoMuscular;
 import enumerations.NivelExigencia;
 
+//import java.util.Random;
+
+
 
 public class Ejercicio {
 	private String nombre;
@@ -11,6 +14,17 @@ public class Ejercicio {
 	private int repeticiones;
 	private int series;
 	private int pesoAsignado;
+	
+	public  Ejercicio(GrupoMuscular grupoMuscular, int aerobico,NivelExigencia nivel) {
+		this.grupoMuscular=grupoMuscular;
+		this.nivelAerobico=aerobico;
+		this.repeticiones=10;
+		this.series=4;
+		this.nivelExigencia=nivel;
+		//Random aleatorio = new Random();
+		//System.out.println(8+aleatorio.nextInt( (10+1) - 8));
+		
+	}
 	
 	public String getNombre() {
 		return nombre;
