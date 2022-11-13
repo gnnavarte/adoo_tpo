@@ -6,6 +6,7 @@ import moduloObjetivo.Objetivo;
 
 
 public class Socio {
+	/* 
 	public Socio(SocioDTO socio) {
 		super();
 		this.email = socio.email;
@@ -16,7 +17,8 @@ public class Socio {
 		this.altura = socio.altura;
 		this.peso = socio.peso;
 	}
-
+	*/
+	
 	private String email;
 	private String password;
 	private String nombre;

@@ -34,22 +34,7 @@ public class Entrenamiento {
 		List<Ejercicio> ejercicios = null;
 		return new Entrenamiento(ejercicios);
 	}
-
-
-	/*
-	private Entrenamiento nuevoEntrenamiento(int aerobicoMinimo, int aerobicoMaximo,int num) {
-		List<Ejercicio> ejercicios = null;
-		for (int i = 0;i<ListadoEjercicios.size();i++) {
-			Ejercicio ejercicio=ListadoEjercicios.get(i);
-			if (ejercicio.getNivelAerobico()>=aerobicoMinimo && ejercicio.getNivelAerobico()<=aerobicoMaximo) {
-				ejercicios.add(ejercicio);
-			}
-		}
-		return new Entrenamiento(ejercicios);
-	}
-	*/
-	
-	
+		
 	public void completarEntrenamiento() {
 		this.completado = true;
 	}

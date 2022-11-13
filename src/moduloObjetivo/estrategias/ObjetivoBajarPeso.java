@@ -1,21 +1,27 @@
 package moduloObjetivo.estrategias;
 
-import moduloObjetivo.estrategias.EstrategiaObjetivo;
-
 import enumerations.NivelExigencia;
+import modelado.Medicion;
 import modelado.RutinaDiaria;
 
 public class ObjetivoBajarPeso implements EstrategiaObjetivo{
 	
-	private int limiteInferiorMinutos;
-	private int limiteSuperiorMinutos;
 	private int nivelAerobico=3;
 	private NivelExigencia nivel=NivelExigencia.Bajo;
+	private int pesoObjetivo;
 	
+	public ObjetivoBajarPeso(int pesoObjetivo) {
+		this.pesoObjetivo = pesoObjetivo;
+	}
 
 	@Override
-	public void generarRutina() {
-		RutinaDiaria rutina=new RutinaDiaria(nivel,nivelAerobico);
+	public RutinaDiaria generarRutina() {
+		return new RutinaDiaria(nivel,nivelAerobico);
+	}
+
+	@Override
+	public boolean cumpleObjetivo(Medicion medicion) {
+		return medicion.getPeso() == pesoObjetivo;
 	}
 
 }
