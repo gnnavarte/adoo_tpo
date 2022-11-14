@@ -9,6 +9,7 @@ public class RutinaDiaria {
 	private boolean completada = false;
 		
 	public RutinaDiaria(NivelExigencia nivel, int nivelAerobicoMinimo) {
+		this.entrenamientos = new ArrayList<Entrenamiento>();
 		this.entrenamientos.add(new Entrenamiento(nivel,nivelAerobicoMinimo,GrupoMuscular.Brazos));
 		this.entrenamientos.add(new Entrenamiento(nivel,nivelAerobicoMinimo,GrupoMuscular.Espalda));
 		this.entrenamientos.add(new Entrenamiento(nivel,nivelAerobicoMinimo,GrupoMuscular.Hombros));

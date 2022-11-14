@@ -3,6 +3,7 @@ import java.util.*;
 
 import enumerations.GrupoMuscular;
 import enumerations.NivelExigencia;
+import models.Ejercicio;
 
 public class Entrenamiento {
 	private List<Ejercicio> ejercicios;
@@ -14,6 +15,7 @@ public class Entrenamiento {
 	}
 
 	public Entrenamiento(NivelExigencia nivel, int nivelAerobicoMinimo, GrupoMuscular grupo) {
+		this.ejercicios = new ArrayList<Ejercicio>();
 		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
 		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
 		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));

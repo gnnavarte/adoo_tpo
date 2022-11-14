@@ -26,6 +26,9 @@ public class Socio {
 		this.sexo = sexo;
 		this.altura = altura;
 		this.pesoActual = pesoActual;
+		this.mediciones = new ArrayList<Medicion>();
+		this.trofeos= new ArrayList<Trofeo>();
+		this.observadores= new ArrayList<Trofeo>();
 	}
 
 	public String getNombre() {
@@ -70,5 +73,15 @@ public class Socio {
 
 	public List<Medicion> getMediciones() {
 		return mediciones;
+	}
+
+	public void agregarObjetivo(Objetivo obj) {
+		this.objetivo = obj;
+		
+	}
+
+	public Objetivo getObjetivo() {
+		return this.objetivo;
+		
 	}
 }
