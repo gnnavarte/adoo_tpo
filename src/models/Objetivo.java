@@ -6,6 +6,7 @@ import strategies.EstrategiaObjetivo;
 public class Objetivo {
 	private Socio socio;
 	private boolean completado;
+	private RutinaDiaria rutina;
 	
 	public boolean isCompletado() {
 		return completado;
@@ -20,7 +21,7 @@ public class Objetivo {
 	}
 
 	public void generarRutina() {
-		this.objetivoStrategy.generarRutina();
+		this.rutina = this.objetivoStrategy.generarRutina();
 	}
 
 	public void setEstrategia(EstrategiaObjetivo estrategia){
@@ -34,5 +35,10 @@ public class Objetivo {
 				observador.chequearPremio();
 			}
 		};
+	}
+
+	public void verRutina() {
+		this.rutina.verRutina();
+		
 	}
 }

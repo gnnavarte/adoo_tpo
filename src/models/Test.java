@@ -24,6 +24,8 @@ public class Test {
 		socio.registrarMedicion(new MedidorAdaptado().registrarMedicion());
 		socio.registrarMedicion(new MedidorAdaptado().registrarMedicion());
 		socio.registrarMedicion(new MedidorAdaptado().registrarMedicion());
+		
+		socio.getObjetivo().verRutina();
 	
 		
 		

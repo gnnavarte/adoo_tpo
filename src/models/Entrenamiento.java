@@ -38,4 +38,11 @@ public class Entrenamiento {
 	public void completarEntrenamiento() {
 		this.completado = true;
 	}
+
+	public void verEntrenamiento() {
+		for (Ejercicio ej : this.ejercicios) {
+			ej.verEjercicio();
+		}
+		
+	}
 }

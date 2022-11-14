@@ -32,4 +32,11 @@ public class RutinaDiaria {
 			this.completada = true;
 		}
 	}
+
+	public void verRutina() {
+		for (Entrenamiento ent : this.entrenamientos) {
+			ent.verEntrenamiento();
+		}
+		
+	}
 }

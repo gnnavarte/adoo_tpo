@@ -68,6 +68,16 @@ public class Ejercicio {
 	public void setPesoAsignado(int pesoAsignado) {
 		this.pesoAsignado = pesoAsignado;
 	}
+
+	public void verEjercicio() {
+		System.out.println("Nombre " + this.grupoMuscular);
+		System.out.println("Nivel " + this.nivelExigencia);
+		System.out.println("Series " + this.series);
+		System.out.println("Repeticiones " + this.repeticiones);
+		
+		System.out.println("\n");
+		
+	}
 	
 	
 	
