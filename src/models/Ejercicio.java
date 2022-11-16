@@ -14,6 +14,7 @@ public class Ejercicio {
 	private int repeticiones;
 	private int series;
 	private int pesoAsignado;
+	private String videoEj;
 	
 	public  Ejercicio(GrupoMuscular grupoMuscular, int aerobico,NivelExigencia nivel) {
 		this.grupoMuscular=grupoMuscular;
@@ -85,6 +86,10 @@ public class Ejercicio {
 	public void reforzarEjercicio(){
     
     }
+
+		public String getVideoUrl() {
+		return videoEj;
+	}
 	
 	public void verEjercicio() {
 		System.out.println("Nombre " + this.grupoMuscular);
