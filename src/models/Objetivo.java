@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 import strategies.EstrategiaObjetivo;
 
@@ -22,6 +23,7 @@ public class Objetivo {
 	public Objetivo(Socio socio, EstrategiaObjetivo objetivoStrategy) {
 		this.socio = socio;
 		this.objetivoStrategy = objetivoStrategy;
+		this.observadores =new ArrayList<Trofeo>();
 	}
 
 	public void agregarObservador(Trofeo trofeo) {
@@ -52,5 +54,10 @@ public class Objetivo {
 	public void verRutina() {
 		this.rutina.verRutina();
 		
+	}
+	
+	// REVISAR SI ESTA BIEN ESTO
+	public void agregarTrofeo(Trofeo trofeo) {
+		this.socio.agregarTrofeo(trofeo);
 	}
 }

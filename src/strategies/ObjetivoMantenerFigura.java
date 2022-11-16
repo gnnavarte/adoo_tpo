@@ -23,6 +23,7 @@ public class ObjetivoMantenerFigura implements EstrategiaObjetivo{
 
 	@Override
 	public boolean cumpleObjetivo(Medicion medicion) {
+		System.out.println(pesoMantener-pesoTolerancia);
 		return (pesoMantener-pesoTolerancia < medicion.getPeso() && medicion.getPeso() <= pesoMantener+pesoTolerancia);
 	}
 

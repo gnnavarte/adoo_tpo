@@ -21,6 +21,9 @@ public class TrofeoCreido extends Trofeo {
 			notificacion.setMensaje("¡Felicitaciones por el trofeo!");
 			Notificador.setAdapter(new FireBase());
 			Notificador.enviarNotificacion(notificacion);
+			
+			socio.agregarTrofeo(this);
+		
 		}
 	}
 }

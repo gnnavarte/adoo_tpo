@@ -20,6 +20,11 @@ public class TrofeoDedicacion extends Trofeo {
 			notificacion.setMensaje("¡Felicitaciones por el trofeo!");
 			Notificador.setAdapter(new FireBase());
 			Notificador.enviarNotificacion(notificacion);
+			
+		
+			
+			objetivo.agregarTrofeo(this);
+
 		}
 	}
 }

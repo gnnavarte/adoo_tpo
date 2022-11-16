@@ -7,9 +7,7 @@ public class Test {
 		Socio socio = new Socio("juan", "Perez", 1130332656, "123@gmail.com",
 		"1234", 25, "masculino", 180, 90);
 
-		Trofeo trofeoObservador = new TrofeoCreido(socio);
-		socio.agregarObservador(trofeoObservador);
-
+		
 		ObjetivoBajarPeso estrategia1 = new ObjetivoBajarPeso(75);
 		ObjetivoTonificarCuerpo estrategia2 = new ObjetivoTonificarCuerpo(socio.getSexo(), socio.getAltura());
 		ObjetivoMantenerFigura estrategia3 = new ObjetivoMantenerFigura(75, 3);
@@ -18,24 +16,40 @@ public class Test {
 
 		socio.agregarObjetivo(obj11);
 		socio.getObjetivo().generarRutina();
-		socio.getObjetivo().verRutina();		
+		socio.getObjetivo().verRutina();	
+		
+		Trofeo trofeoObservador = new TrofeoCreido(socio);
+		socio.agregarObservador(trofeoObservador);
+		
+		Trofeo trofeoObservador2 = new TrofeoConstancia(socio.getObjetivo().getRutina());
+		socio.getObjetivo().getRutina().agregarObservador(trofeoObservador2);
+		
+		Trofeo trofeoObservador3 = new TrofeoDedicacion(obj11);
+		obj11.agregarObservador(trofeoObservador3);
+		
+		
+		
 		
 		//Trofeo del creido
 		socio.registrarMedicion(new MedidorAdaptado().registrarMedicion());
 		socio.registrarMedicion(new MedidorAdaptado().registrarMedicion());
 		socio.registrarMedicion(new MedidorAdaptado().registrarMedicion());
+		
 
 		//Trofeo a la constancia
 		socio.getObjetivo().setEstrategia(estrategia2);
 		socio.getObjetivo().generarRutina();
-		socio.getObjetivo().verRutina();
+		//socio.getObjetivo().verRutina();
 		obj11.getRutina().completarRutina();
+		
+		
 
 		//Trofeo de la dedicacion
 		socio.getObjetivo().setEstrategia(estrategia3);
 		socio.getObjetivo().completarObjetivo();
+		
+		socio.verTrofeos();
 
-		System.out.println("prueba funcionamiento");
 	}
 
 }

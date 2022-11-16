@@ -86,4 +86,19 @@ public class Socio {
 		return this.objetivo;
 		
 	}
+	
+	public void verTrofeos() {
+		System.out.println("trofeos: " + this.trofeos.size());
+		for (Trofeo tr : this.trofeos) {
+			System.out.println(tr.nombre + tr.descripcion + tr.fechaConseguido);	
+			}
+		
+	}
+
+	public void agregarTrofeo(Trofeo trofeo) {
+		this.trofeos.add(trofeo);
+		
+	}
+
+
 }

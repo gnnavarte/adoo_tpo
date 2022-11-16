@@ -17,6 +17,7 @@ public class RutinaDiaria {
 		this.entrenamientos.add(new Entrenamiento(nivel,nivelAerobicoMinimo,GrupoMuscular.Hombros));
 		this.entrenamientos.add(new Entrenamiento(nivel,nivelAerobicoMinimo,GrupoMuscular.Pecho));
 		this.entrenamientos.add(new Entrenamiento(nivel,nivelAerobicoMinimo,GrupoMuscular.Piernas));
+		this.observadores =new ArrayList<Trofeo>();
 	}
 
 	public boolean isCompletada() {
@@ -50,6 +51,11 @@ public class RutinaDiaria {
 		for (Entrenamiento ent : this.entrenamientos) {
 			ent.verEntrenamiento();
 		}
+		
+	}
+
+	public void agregarTrofeo(Trofeo trofeo) {
+		
 		
 	}
 }
