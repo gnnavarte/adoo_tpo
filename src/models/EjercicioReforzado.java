@@ -1,23 +1,33 @@
 
 package models;
 
-public class EjercicioReforzado extends DecoradorEjercicio{
+public class EjercicioReforzado extends Ejercicio{
+    private Integer repsAdicional;
+    private Integer seriesAdicional;
+    private Integer pesoAdicional;
+    private Ejercicio ejercicio;
 
+    public EjercicioReforzado(Ejercicio ej, Integer repsAdicional, Integer seriesAdicional, Integer pesoAdicional) {
+        this.ejercicio = ej;
+        this.nombre = ej.getNombre();
+        this.repsAdicional = repsAdicional;
+        this.seriesAdicional = seriesAdicional;
+        this.pesoAdicional = pesoAdicional;
+    }
 
-    public EjercicioReforzado(Ejercicio ejercicio) {
-        super(ejercicio);
-    }
-    
-    public void modificarSets(){  
-        ejercicio.setSeries(ejercicio.getSeries() + 1);
-    }
-    
-    public void modificarRepeticiones(){
-        ejercicio.setRepeticiones(ejercicio.getRepeticiones() + 2);
-    }
-    
-    public void modificarPeso(){
-    ejercicio.setPesoAsignado(ejercicio.getPesoAsignado() + 2.5);
-    }
+    @Override
+	public int getSeries() {
+		return ejercicio.getSeries() + seriesAdicional;
+	}
+
+    @Override
+    public int getRepeticiones() {
+		return ejercicio.getRepeticiones() + repsAdicional;
+	}
+
+    @Override
+    public int getPesoAsignado() {
+		return ejercicio.getPesoAsignado() + pesoAdicional;
+	}
 
 }

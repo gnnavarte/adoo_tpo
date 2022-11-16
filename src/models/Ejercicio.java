@@ -7,15 +7,18 @@ import enumerations.NivelExigencia;
 
 
 public class Ejercicio {
-	private String nombre;
-	private GrupoMuscular grupoMuscular;
-	private int nivelAerobico;
-	private NivelExigencia nivelExigencia;
-	private int repeticiones;
-	private int series;
-	private int pesoAsignado;
-	private String videoEj;
+	protected String nombre;
+	protected GrupoMuscular grupoMuscular;
+	protected int nivelAerobico;
+	protected NivelExigencia nivelExigencia;
+	protected int repeticiones;
+	protected int series;
+	protected int pesoAsignado;
+	protected String videoEj;
 	
+	public Ejercicio() {
+	}
+
 	public  Ejercicio(GrupoMuscular grupoMuscular, int aerobico,NivelExigencia nivel) {
 		this.grupoMuscular=grupoMuscular;
 		this.nivelAerobico=aerobico;
@@ -27,78 +30,63 @@ public class Ejercicio {
 		
 	}
 	
+	
+	public void verEjercicio() {
+		System.out.println("Nombre " + getNombre());
+		System.out.println("Series " + getSeries());
+		System.out.println("Repeticiones " + getRepeticiones());
+		System.out.println("Peso asignado " + getPesoAsignado());
+		
+		System.out.println("\n");
+		
+	}
+
+
+
 	public String getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+
 
 	public GrupoMuscular getGrupoMuscular() {
 		return grupoMuscular;
 	}
 
-	public void setGrupoMuscular(GrupoMuscular grupoMuscular) {
-		this.grupoMuscular = grupoMuscular;
-	}
+
 
 	public int getNivelAerobico() {
 		return nivelAerobico;
 	}
 
-	public void setNivelAerobico(int nivelAerobico) {
-		this.nivelAerobico = nivelAerobico;
-	}
+
 
 	public NivelExigencia getNivelExigencia() {
 		return nivelExigencia;
 	}
 
-	public void setNivelExigencia(NivelExigencia nivelExigencia) {
-		this.nivelExigencia = nivelExigencia;
-	}
+
 
 	public int getRepeticiones() {
 		return repeticiones;
 	}
 
-	public void setRepeticiones(int repeticiones) {
-		this.repeticiones = repeticiones;
-	}
+
 
 	public int getSeries() {
 		return series;
 	}
 
-	public void setSeries(int series) {
-		this.series = series;
-	}
+
 
 	public int getPesoAsignado() {
 		return pesoAsignado;
 	}
 
-	public void setPesoAsignado(int pesoAsignado) {
-		this.pesoAsignado = pesoAsignado;
-	}
 
-	public void reforzarEjercicio(){
-    
-    }
 
-		public String getVideoUrl() {
+	public String getVideoEj() {
 		return videoEj;
-	}
-	
-	public void verEjercicio() {
-		System.out.println("Nombre " + this.grupoMuscular);
-		System.out.println("Nivel " + this.nivelExigencia);
-		System.out.println("Series " + this.series);
-		System.out.println("Repeticiones " + this.repeticiones);
-		
-		System.out.println("\n");
-		
 	}
 	
 	
