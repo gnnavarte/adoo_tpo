@@ -17,8 +17,10 @@ public class TrofeoCreido extends Trofeo {
 	public void chequearPremio() {
 		if (socio.getMediciones().size()>=3) {
 			this.fechaConseguido = java.time.LocalDate.now();
+			Notificacion notificacion = new Notificacion();
+			notificacion.setMensaje("¡Felicitaciones por el trofeo!");
 			Notificador.setAdapter(new FireBase());
-			Notificador.enviarNotificacion(null);
+			Notificador.enviarNotificacion(notificacion);
 		}
 	}
 }

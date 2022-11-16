@@ -8,6 +8,10 @@ public class Objetivo {
 	private boolean completado;
 	private RutinaDiaria rutina;
 	
+	public RutinaDiaria getRutina() {
+		return rutina;
+	}
+
 	public boolean isCompletado() {
 		return completado;
 	}
@@ -18,6 +22,14 @@ public class Objetivo {
 	public Objetivo(Socio socio, EstrategiaObjetivo objetivoStrategy) {
 		this.socio = socio;
 		this.objetivoStrategy = objetivoStrategy;
+	}
+
+	public void agregarObservador(Trofeo trofeo) {
+		observadores.add(trofeo);
+	}
+	
+	public void eliminarObservador(Trofeo trofeo) {
+		observadores.remove(trofeo);
 	}
 
 	public void generarRutina() {

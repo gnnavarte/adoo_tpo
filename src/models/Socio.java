@@ -2,11 +2,11 @@ package models;
 import java.util.*;
 
 public class Socio {
-
-	private String email;
-	private String password;
 	private String nombre;
 	private String apellido;
+	private Integer cel;
+	private String email;
+	private String password;
 	private Integer edad;
 	private String sexo;
 	private Integer altura;
@@ -16,19 +16,21 @@ public class Socio {
 	private List<Trofeo> trofeos;
 	private List<Trofeo> observadores;
 	
-	public Socio(String email, String password, String nombre, String apellido, Integer edad, String sexo,
+
+	public Socio(String nombre, String apellido, Integer cel, String email, String password, Integer edad, String sexo,
 			Integer altura, Integer pesoActual) {
-		this.email = email;
-		this.password = password;
 		this.nombre = nombre;
 		this.apellido = apellido;
+		this.cel = cel;
+		this.email = email;
+		this.password = password;
 		this.edad = edad;
 		this.sexo = sexo;
 		this.altura = altura;
 		this.pesoActual = pesoActual;
 		this.mediciones = new ArrayList<Medicion>();
-		this.trofeos= new ArrayList<Trofeo>();
-		this.observadores= new ArrayList<Trofeo>();
+		this.trofeos = new ArrayList<Trofeo>();
+		this.observadores = new ArrayList<Trofeo>();
 	}
 
 	public String getNombre() {

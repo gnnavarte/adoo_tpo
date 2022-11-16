@@ -1,6 +1,5 @@
 package adapters;
 
-import adapters.AdapterFireBase;
 import models.Notificacion;
 
 public class FireBase implements AdapterFireBase{

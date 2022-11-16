@@ -17,8 +17,10 @@ public class TrofeoConstancia extends Trofeo {
 	public void chequearPremio() {
 		if (rutina.isCompletada()) {
 			this.fechaConseguido = java.time.LocalDate.now();
+			Notificacion notificacion = new Notificacion();
+			notificacion.setMensaje("¡Felicitaciones por el trofeo!");
 			Notificador.setAdapter(new FireBase());
-			Notificador.enviarNotificacion(null);
+			Notificador.enviarNotificacion(notificacion);
 		}
 	}
 }
