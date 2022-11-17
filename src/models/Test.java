@@ -24,11 +24,8 @@ public class Test {
 		Trofeo trofeoObservador = new TrofeoCreido(socio);
 		socio.agregarObservador(trofeoObservador);
 		
-		Trofeo trofeoObservador2 = new TrofeoConstancia(socio.getObjetivo().getRutina());
-		socio.getObjetivo().getRutina().agregarObservador(trofeoObservador2);
-		
 		Trofeo trofeoObservador3 = new TrofeoDedicacion(obj11);
-		obj11.agregarObservador(trofeoObservador3);
+		socio.getObjetivo().agregarObservador(trofeoObservador3);
 		
 		
 		
@@ -40,10 +37,12 @@ public class Test {
 		
 
 		//Trofeo a la constancia
-		socio.getObjetivo().setEstrategia(estrategia2);
+		socio.getObjetivo().setEstrategia(estrategia1);
 		socio.getObjetivo().generarRutina();
+		Trofeo trofeoObservador2 = new TrofeoConstancia(socio,socio.getObjetivo().getRutina());
+		socio.getObjetivo().getRutina().agregarObservador(trofeoObservador2);
 		//socio.getObjetivo().verRutina();
-		obj11.getRutina().completarRutina();
+		socio.getObjetivo().getRutina().completarRutina();
 		
 		
 

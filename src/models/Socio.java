@@ -88,9 +88,9 @@ public class Socio {
 	}
 	
 	public void verTrofeos() {
-		System.out.println("trofeos: " + this.trofeos.size());
+		System.out.println("=======TROFEOS========");
 		for (Trofeo tr : this.trofeos) {
-			System.out.println(tr.nombre + tr.descripcion + tr.fechaConseguido);	
+			System.out.println(tr.nombre + " " + tr.descripcion + " " + tr.fechaConseguido);	
 			}
 		
 	}

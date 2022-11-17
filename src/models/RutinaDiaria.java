@@ -21,7 +21,7 @@ public class RutinaDiaria {
 	}
 
 	public boolean isCompletada() {
-		return completada;
+		return this.completada;
 	}
 
 	public void agregarObservador(Trofeo trofeo) {
@@ -54,10 +54,6 @@ public class RutinaDiaria {
 		
 	}
 
-	public void agregarTrofeo(Trofeo trofeo) {
-		
-		
-	}
 	
 	public void reforzarRutina(Integer repsAdicional, Integer seriesAdicional, Integer pesoAdicional) {
 		for (Entrenamiento ent : this.entrenamientos) {
