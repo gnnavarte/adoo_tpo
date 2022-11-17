@@ -19,7 +19,6 @@ public class Entrenamiento {
 		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
 		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
 		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
-		this.ejercicios.add(new Ejercicio(grupo,nivelAerobicoMinimo,nivel));
 	}
 
 
@@ -44,5 +43,14 @@ public class Entrenamiento {
 			ej.verEjercicio();
 		}
 		
+	}
+
+	public void reforzarEntrenamieno(Integer repsAdicional, Integer seriesAdicional, Integer pesoAdicional) {
+		List<Ejercicio> aux = new ArrayList<Ejercicio>();
+		for (Ejercicio ej : this.ejercicios) {
+			EjercicioReforzado ejr = new EjercicioReforzado(ej, repsAdicional, seriesAdicional, pesoAdicional);
+			aux.add(ejr);
+		}
+		this.ejercicios = aux;
 	}
 }

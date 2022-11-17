@@ -58,4 +58,10 @@ public class RutinaDiaria {
 		
 		
 	}
+	
+	public void reforzarRutina(Integer repsAdicional, Integer seriesAdicional, Integer pesoAdicional) {
+		for (Entrenamiento ent : this.entrenamientos) {
+			ent.reforzarEntrenamieno(repsAdicional, seriesAdicional, pesoAdicional);
+		}
+	}
 }

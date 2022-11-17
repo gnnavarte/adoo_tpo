@@ -18,6 +18,9 @@ public class Test {
 		socio.getObjetivo().generarRutina();
 		socio.getObjetivo().verRutina();	
 		
+		socio.getObjetivo().getRutina().reforzarRutina(1, 1, 2);
+		socio.getObjetivo().verRutina();
+		
 		Trofeo trofeoObservador = new TrofeoCreido(socio);
 		socio.agregarObservador(trofeoObservador);
 		

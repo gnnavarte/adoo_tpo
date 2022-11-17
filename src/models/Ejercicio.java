@@ -25,6 +25,8 @@ public class Ejercicio {
 		this.repeticiones=10;
 		this.series=4;
 		this.nivelExigencia=nivel;
+		this.pesoAsignado = 10;
+		this.nombre = grupoMuscular.name();
 		//Random aleatorio = new Random();
 		//System.out.println(8+aleatorio.nextInt( (10+1) - 8));
 		
